@@ -1,4 +1,4 @@
-package ru.urfu.MySecondTestAppSpringBoot.controller;
+package ru.urfu.MyThirdTestAppSpringBoot.controller;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -10,13 +10,14 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import ru.urfu.MySecondTestAppSpringBoot.exception.UnsupportedCodeException;
-import ru.urfu.MySecondTestAppSpringBoot.exception.ValidationFailedException;
-import ru.urfu.MySecondTestAppSpringBoot.model.*;
-import ru.urfu.MySecondTestAppSpringBoot.service.ModifyResponseService;
-import ru.urfu.MySecondTestAppSpringBoot.service.ValidationService;
-import ru.urfu.MySecondTestAppSpringBoot.util.DateTimeUtil;
+import ru.urfu.MyThirdTestAppSpringBoot.exception.UnsupportedCodeException;
+import ru.urfu.MyThirdTestAppSpringBoot.exception.ValidationFailedException;
+import ru.urfu.MyThirdTestAppSpringBoot.model.*;
+import ru.urfu.MyThirdTestAppSpringBoot.service.ModifyResponseService;
+import ru.urfu.MyThirdTestAppSpringBoot.service.ValidationService;
+import ru.urfu.MyThirdTestAppSpringBoot.util.DateTimeUtil;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 @Slf4j
@@ -36,7 +37,16 @@ public class MyController {
     @PostMapping(value = "/feedback")
     public ResponseEntity<Response> feedback(@Valid @RequestBody Request request,
                                              BindingResult bindingResult) {
+        Date receivedTime = new Date();
         log.info("request: {}", request);
+
+        try {
+            Date service1Time = DateTimeUtil.getCustomFormat().parse(request.getSystemTime());
+            long diff = receivedTime.getTime() - service1Time.getTime();
+            log.info("время от получения Request Сервисом 1 до получения Сервисом 2: {} мс", diff);
+        } catch (ParseException | NullPointerException e) {
+            log.error("не удалось разобрать systemTime '{}': {}", request.getSystemTime(), e.getMessage());
+        }
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 

@@ -1,4 +1,4 @@
-package ru.urfu.MySecondTestAppSpringBoot.model;
+package ru.urfu.MyThirdTestAppSpringBoot.model;
 
 import lombok.Builder;
 import lombok.Data;

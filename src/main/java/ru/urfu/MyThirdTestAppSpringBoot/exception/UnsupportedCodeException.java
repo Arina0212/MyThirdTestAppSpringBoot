@@ -1,4 +1,4 @@
-package ru.urfu.MySecondTestAppSpringBoot.exception;
+package ru.urfu.MyThirdTestAppSpringBoot.exception;
 
 public class UnsupportedCodeException extends Exception {
 

@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.urfu</groupId>
-	<artifactId>MySecondTestAppSpringBoot</artifactId>
+	<artifactId>MyThirdTestAppSpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>MySecondTestAppSpringBoot</name>
+	<name>MyThirdTestAppSpringBoot</name>
 	<description>REST service for laboratory work 2</description>
 
 	<properties>

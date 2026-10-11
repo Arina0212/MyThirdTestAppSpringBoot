@@ -1,4 +1,4 @@
-package ru.urfu.MySecondTestAppSpringBoot.exception;
+package ru.urfu.MyThirdTestAppSpringBoot.exception;
 
 public class ValidationFailedException extends Exception {
 

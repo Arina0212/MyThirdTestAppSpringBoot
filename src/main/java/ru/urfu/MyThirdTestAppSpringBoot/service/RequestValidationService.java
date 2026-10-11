@@ -1,10 +1,10 @@
-package ru.urfu.MySecondTestAppSpringBoot.service;
+package ru.urfu.MyThirdTestAppSpringBoot.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import ru.urfu.MySecondTestAppSpringBoot.exception.UnsupportedCodeException;
-import ru.urfu.MySecondTestAppSpringBoot.exception.ValidationFailedException;
+import ru.urfu.MyThirdTestAppSpringBoot.exception.UnsupportedCodeException;
+import ru.urfu.MyThirdTestAppSpringBoot.exception.ValidationFailedException;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

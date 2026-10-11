@@ -1,8 +1,8 @@
-package ru.urfu.MySecondTestAppSpringBoot.service;
+package ru.urfu.MyThirdTestAppSpringBoot.service;
 
 import org.springframework.validation.BindingResult;
-import ru.urfu.MySecondTestAppSpringBoot.exception.UnsupportedCodeException;
-import ru.urfu.MySecondTestAppSpringBoot.exception.ValidationFailedException;
+import ru.urfu.MyThirdTestAppSpringBoot.exception.UnsupportedCodeException;
+import ru.urfu.MyThirdTestAppSpringBoot.exception.ValidationFailedException;
 
 public interface ValidationService {
 

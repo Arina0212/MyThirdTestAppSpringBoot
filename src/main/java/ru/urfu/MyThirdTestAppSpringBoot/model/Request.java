@@ -1,4 +1,4 @@
-package ru.urfu.MySecondTestAppSpringBoot.model;
+package ru.urfu.MyThirdTestAppSpringBoot.model;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
